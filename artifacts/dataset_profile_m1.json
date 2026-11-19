@@ -1,0 +1,115 @@
+{
+  "observation_view": "switch (cross-bank P2P only) · synthetic · learnability only",
+  "events_all": 5589024,
+  "scored_rows": 1442979,
+  "splits": {
+    "train": {
+      "intents": 718837,
+      "accounts": 12000,
+      "positive_intents": 5436,
+      "positive_intents_known_at_cutoff": 5405,
+      "episodes": {
+        "A": 802,
+        "D": 402
+      },
+      "episodes_without_visible_intent": 80,
+      "rings": 240,
+      "hn_intents": {
+        "BILL_SPLIT": 5217,
+        "DEPOSIT_RETURNED": 1216,
+        "FAMILY": 5600,
+        "FRIEND_LOAN_REPAID": 2971,
+        "LEGIT_ESCALATION": 4105,
+        "SHOP_PARTIAL_REFUND": 2635
+      },
+      "insufficient_history_share": 0.0007
+    },
+    "val": {
+      "intents": 239035,
+      "accounts": 11973,
+      "positive_intents": 1915,
+      "positive_intents_known_at_cutoff": null,
+      "episodes": {
+        "A": 282,
+        "D": 154
+      },
+      "episodes_without_visible_intent": 26,
+      "rings": 83,
+      "hn_intents": {
+        "BILL_SPLIT": 1626,
+        "DEPOSIT_RETURNED": 368,
+        "FAMILY": 1978,
+        "FRIEND_LOAN_REPAID": 992,
+        "LEGIT_ESCALATION": 1201,
+        "SHOP_PARTIAL_REFUND": 838
+      },
+      "insufficient_history_share": 0.0007
+    },
+    "test": {
+      "intents": 478182,
+      "accounts": 11999,
+      "positive_intents": 2661,
+      "positive_intents_known_at_cutoff": null,
+      "episodes": {
+        "A": 254,
+        "A_holdout": 101,
+        "D": 211
+      },
+      "episodes_without_visible_intent": 30,
+      "rings": 120,
+      "hn_intents": {
+        "BILL_SPLIT": 3380,
+        "DEPOSIT_RETURNED": 743,
+        "FAMILY": 3512,
+        "FRIEND_LOAN_REPAID": 2037,
+        "LEGIT_ESCALATION": 2643,
+        "SHOP_PARTIAL_REFUND": 1752
+      },
+      "insufficient_history_share": 0.0007
+    }
+  },
+  "negative_seed_like_mean_by_day": {
+    "[90, 120)": 8.535,
+    "[120, 150)": 4.029,
+    "[150, 270)": 3.711,
+    "[270, 330)": 3.683,
+    "[330, 450)": 3.68
+  },
+  "excluded": {
+    "ring_payer_intents": 6925,
+    "purged_scam_intents": 0,
+    "train_positive_intents_unknown_at_cutoff": 31
+  },
+  "example_episode": {
+    "episode_id": "e004c8a4866cf807b",
+    "variant": "",
+    "loss_thb": 2219.49,
+    "rows": [
+      {
+        "day": 0.0,
+        "role": "STEP",
+        "direction": "OUT",
+        "amount_thb": 319.49,
+        "route": "CROSS_BANK",
+        "txn_type": "P2P"
+      },
+      {
+        "day": 21.72,
+        "role": "SEED_INFLOW",
+        "direction": "IN",
+        "amount_thb": 308.28,
+        "route": "ON_US",
+        "txn_type": "P2P"
+      },
+      {
+        "day": 21.98,
+        "role": "STEP",
+        "direction": "OUT",
+        "amount_thb": 1900.0,
+        "route": "CROSS_BANK",
+        "txn_type": "P2P"
+      }
+    ]
+  },
+  "seconds": 188.0
+}
